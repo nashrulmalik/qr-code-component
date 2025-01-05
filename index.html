@@ -12,8 +12,11 @@
   <style>
     @import url('https://fonts.cdnfonts.com/css/outfit');
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      /* Resetting margin and padding for all elements */
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       background-color: #D5E1EF;
@@ -27,9 +30,12 @@
     }
 
     .card {
+      display: flex;
+      flex-direction: column;
       padding: 16px;
+      padding-bottom: 40px;
       width: 288px;
-      margin: 0 auto;
+      margin: auto;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -39,34 +45,37 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    h1, p {
-      margin: 0;
-    }
-
     .text-container {
       text-align: center;
-      padding: 24px 16px;
+      padding: 0 16px;
+      margin-top: 24px;
     }
 
-    .title {
+    h1 {
       color: #1F314F;
       font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0px;
     }
 
-    .subtitle {
+    p {
       color: #68778D;
       font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.2px;
+      margin-top: 16px;
     }
+
   </style>
 </head>
 <body>
   <main class="card">
     <img src="images/image-qr-code.png" alt="qr code" width="288" height="288">
     <div class="text-container">
-      <h1 class="title">Improve your front-end skills by building projects</h1>
-      <p class="subtitle">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+      <h1>Improve your front-end skills by building projects</h1>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
   </main>
 </body>
